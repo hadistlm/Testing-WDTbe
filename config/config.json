@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "db_test_express",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "migrationStorage": "sequelize",
+    "seederStorage": "sequelize",
+    "migrationStorageTableName": "db_migration",
+    "seederStorageTableName": "db_seeders"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "migrationStorage": "sequelize",
+    "seederStorage": "sequelize",
+    "migrationStorageTableName": "db_migration",
+    "seederStorageTableName": "db_seeders"
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "db_test_express",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "migrationStorage": "sequelize",
+    "seederStorage": "sequelize",
+    "migrationStorageTableName": "db_migration",
+    "seederStorageTableName": "db_seeders"
+  }
+}
