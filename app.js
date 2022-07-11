@@ -22,7 +22,7 @@
   let logger 		   = MODULES.logger;
   let consign 	   = MODULES.consign;
   let cors         = MODULES.cors;
-  let models       = require(CONSTANT.PATH.Model_Path);
+  // let models       = require(CONSTANT.PATH.Model_Path);
 
 /**
  * ==================================================
@@ -49,7 +49,7 @@
  */
 
   // load the models loader 
-  app.set('models', models);
+  // app.set('models', models);
 
   // load the custom variable
   Object.keys(CONSTANT.VARIABLE).forEach(function(key) {

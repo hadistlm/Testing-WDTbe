@@ -9,7 +9,7 @@ global.CONSTANT = require('../config/constant');
 var app     = require(CONSTANT.PATH.App_Path);
 var debug   = MODULES.debug('latihanexpress:server');
 var http    = MODULES.http;
-var models  = require(CONSTANT.PATH.Model_Path);
+// var models  = require(CONSTANT.PATH.Model_Path);
 
 /**
  * Get port from environment and store in Express.
