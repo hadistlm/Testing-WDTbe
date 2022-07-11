@@ -39,5 +39,12 @@ module.exports = function(app) {
     return res.json(result);
   };
 
+  this.logout = function(req, res, next) {
+    return res.json({
+      'status': 'success',
+      'message': 'user has logged out'
+    });
+  };
+
   return this;
 };
