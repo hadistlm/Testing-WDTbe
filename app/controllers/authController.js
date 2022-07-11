@@ -36,7 +36,7 @@ module.exports = function(app) {
       };
     }
 
-    return res.json(result);
+    return res.status((result.status == 'success' ? 200 : 400)).json(result);
   };
 
   this.logout = function(req, res, next) {

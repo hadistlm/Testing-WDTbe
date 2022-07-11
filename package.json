@@ -2,7 +2,7 @@
   "name": "express-kickstarter",
   "version": "2.0.0",
   "description": "This is WDT backend REST server.",
-  "main": "app.js",
+  "main": "bin/www",
   "private": true,
   "author": "Islaa",
   "license": "MIT",
