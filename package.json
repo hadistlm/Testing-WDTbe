@@ -14,6 +14,7 @@
     "node": "16.x"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.3.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
@@ -22,9 +23,9 @@
     "debug": "~4.1.1",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "faker": "^5.5.3",
     "http-errors": "~1.8.0",
     "jade": "~1.11.0",
+    "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "morgan": "~1.10.0",
     "mysql": "^2.18.1",
