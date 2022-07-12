@@ -12,7 +12,7 @@ module.exports = function(app) {
     // prepare variable
     let articles = [];
     let page     = req.query.page ? parseInt(req.query.page) : 1;
-    let perpage   = req.query.perpage ? parseInt(req.query.perpage) : 10;
+    let perpage  = req.query.perpage ? parseInt(req.query.perpage) : 10;
 
     if (!page || page <= 2) {
       let indexNumber = (page * perpage) - perpage;
@@ -43,7 +43,7 @@ module.exports = function(app) {
         'page': page,
         'perpage': perpage,
         'total': 20,
-        'total_pages': Math.ceil(20 / req.query.perpage)
+        'total_pages': Math.ceil(20 / perpage)
       },
       'data': articles
     };
