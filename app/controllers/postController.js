@@ -10,13 +10,14 @@ module.exports = function(app) {
   
   this.postList = function(req, res, next) {
     // prepare variable
-    let articles = [];
-    let page     = req.query.page ? parseInt(req.query.page) : 1;
-    let perpage  = req.query.perpage ? parseInt(req.query.perpage) : 10;
+    let articles  = [];
+    let page      = req.query.page ? parseInt(req.query.page) : 1;
+    let perpage   = req.query.perpage ? parseInt(req.query.perpage) : 10;
+    let fixLength = req.query.fixData ? parseInt(req.query.fixData) : false;
 
     if (!page || page <= 2) {
       let indexNumber = (page * perpage) - perpage;
-      let arrayLength = 20 - indexNumber;
+      let arrayLength = fixLength ? fixLength : 20 - indexNumber;
 
       Array.from(Array(arrayLength).keys()).forEach((val, index) => {
         let title = faker.lorem.words(8);
@@ -27,7 +28,7 @@ module.exports = function(app) {
           'title': title,
           'slug': faker.helpers.slugify(title),
           'body': faker.lorem.paragraphs(8),
-          'image': faker.image.people(),
+          'image': faker.image.people(640, 480, true),
           'category': faker.commerce.department(),
           'created_by': 'Dadan Ramdana',
           'created_date': moment(faker.date.past()).format('YYYY-MM-DD HH:mm:ss'),
@@ -68,7 +69,7 @@ module.exports = function(app) {
         ),
         'slug': slugName,
         'body': faker.lorem.paragraphs(8),
-        'image': faker.image.people(),
+        'image': faker.image.people(640, 480, true),
         'category': faker.commerce.department(),
         'comments': Array.from(Array(lodash.random(1, 10)).keys()).map((val, index) => {
           return {
